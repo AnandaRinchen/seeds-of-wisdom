@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Seeds of Wisdom — Khenpo Kunga Rinchen · Rela Monastery School</title>
+<meta name="description" content="Support Khenpo Kunga Rinchen and the young monks of Rela Monastery Primary School in Nangchen, Kham — nestled among the highest peaks on Earth." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --paper:#F5EDDF;
+  --paper-deep:#EDE2CE;
+  --paper-soft:#FAF4E8;
+  --ink:#1A1410;
+  --ink-soft:#3a2e25;
+  --maroon:#7A1F1A;
+  --maroon-deep:#5C1612;
+  --saffron:#B8893A;
+  --gold:#9C7A2E;
+  --teal:#2C5F6E;
+  --teal-soft:#5B8A98;
+  --rule:rgba(26,20,16,0.18);
+  --rule-soft:rgba(26,20,16,0.08);
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'EB Garamond', Georgia, serif;
+  font-size:18px;
+  line-height:1.65;
+  color:var(--ink);
+  background:var(--paper);
+  background-image:
+    radial-gradient(ellipse at 20% 0%, rgba(184,137,58,0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 100%, rgba(44,95,110,0.06) 0%, transparent 50%);
+  background-attachment:fixed;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+body::before{
+  content:"";
+  position:fixed;inset:0;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.08 0 0 0 0 0.06 0 0 0 0.5 0'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.35'/></svg>");
+  opacity:0.35;
+  mix-blend-mode:multiply;
+  pointer-events:none;
+  z-index:1;
+}
+
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+
+/* Display + body type */
+.display{font-family:'Cormorant Garamond', 'EB Garamond', serif;font-weight:400;letter-spacing:-0.01em;line-height:1.05}
+.italic{font-style:italic}
+.mono{font-family:'DM Mono', ui-monospace, monospace;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase}
+
+/* Layout */
+main{position:relative;z-index:2}
+section{position:relative;padding:120px 0;}
+.wrap{max-width:1240px;margin:0 auto;padding:0 40px;position:relative}
+.wrap-narrow{max-width:880px;margin:0 auto;padding:0 40px}
+
+/* ======================== NAV ======================== */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  padding:18px 40px;
+  display:flex;align-items:center;justify-content:space-between;
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  background:rgba(245,237,223,0.78);
+  border-bottom:1px solid var(--rule-soft);
+}
+.nav-brand{display:flex;align-items:center;gap:14px}
+.nav-mark{
+  width:38px;height:38px;
+  display:grid;place-items:center;
+  border:1px solid var(--maroon);
+  color:var(--maroon);
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.15rem;font-style:italic;
+  border-radius:50%;
+}
+.nav-title{font-family:'Cormorant Garamond',serif;font-size:1.15rem;letter-spacing:0.02em}
+.nav-title em{font-style:italic;color:var(--maroon)}
+.nav-links{display:flex;gap:32px;align-items:center}
+.nav-links a{font-family:'DM Mono',monospace;font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-soft);transition:color .2s}
+.nav-links a:hover{color:var(--maroon)}
+.nav-cta{
+  padding:10px 18px;
+  background:var(--maroon);
+  color:var(--paper-soft) !important;
+  border-radius:2px;
+  transition:background .25s;
+}
+.nav-cta:hover{background:var(--maroon-deep)}
+
+@media (max-width: 760px){
+  .nav-links a:not(.nav-cta){display:none}
+  .nav{padding:14px 22px}
+}
+
+/* ======================== HERO ======================== */
+.hero{
+  padding:170px 0 90px;
+  min-height:100vh;
+  display:flex;align-items:center;
+  position:relative;
+}
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.05fr 0.95fr;
+  gap:60px;
+  align-items:center;
+}
+.hero-eyebrow{
+  display:flex;align-items:center;gap:14px;
+  margin-bottom:36px;
+  color:var(--maroon);
+}
+.hero-eyebrow .line{width:60px;height:1px;background:var(--maroon);opacity:0.5}
+.hero-headline{
+  font-size:clamp(3.2rem, 7.2vw, 6.8rem);
+  font-weight:300;
+  line-height:0.96;
+  letter-spacing:-0.02em;
+  color:var(--ink);
+  margin-bottom:28px;
+}
+.hero-headline em{font-style:italic;color:var(--maroon);font-weight:400}
+.hero-headline .small{display:block;font-size:0.78rem;letter-spacing:0.22em;text-transform:uppercase;font-family:'DM Mono',monospace;color:var(--ink-soft);font-style:normal;margin-top:26px;font-weight:400;line-height:1.6}
+.hero-sub{
+  font-size:1.18rem;
+  color:var(--ink-soft);
+  max-width:480px;
+  margin-bottom:42px;
+  line-height:1.6;
+}
+.hero-sub::first-letter{
+  font-family:'Cormorant Garamond',serif;
+  font-size:3.2rem;float:left;line-height:0.85;
+  padding:6px 10px 0 0;color:var(--maroon);
+  font-style:italic;
+}
+.hero-actions{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:14px 26px;
+  font-family:'DM Mono',monospace;font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;
+  border:1px solid var(--maroon);
+  transition:all .3s ease;
+  cursor:pointer;
+}
+.btn-primary{background:var(--maroon);color:var(--paper-soft)}
+.btn-primary:hover{background:var(--maroon-deep);transform:translateY(-2px);box-shadow:0 8px 24px -8px rgba(122,31,26,0.4)}
+.btn-ghost{color:var(--maroon);background:transparent}
+.btn-ghost:hover{background:var(--maroon);color:var(--paper-soft)}
+.btn .arrow{transition:transform .25s}
+.btn:hover .arrow{transform:translateX(4px)}
+
+.hero-figure{position:relative}
+.hero-figure img{
+  width:100%;
+  filter:saturate(1.05);
+  border-radius:2px;
+}
+.hero-figure::before{
+  content:"";
+  position:absolute;
+  inset:-22px -22px 22px 22px;
+  border:1px solid var(--maroon);
+  z-index:-1;
+  opacity:0.6;
+}
+.hero-figure-tag{
+  position:absolute;left:-26px;bottom:30px;
+  background:var(--paper-soft);
+  padding:14px 22px;
+  border-left:2px solid var(--maroon);
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;font-size:1.05rem;
+  box-shadow:0 12px 32px -12px rgba(0,0,0,0.15);
+  max-width:260px;
+}
+.hero-figure-tag .name{
+  display:block;
+  font-family:'DM Mono',monospace;
+  font-style:normal;font-size:0.62rem;letter-spacing:0.18em;
+  text-transform:uppercase;color:var(--maroon);margin-top:6px;
+}
+
+/* Decorative ornament */
+.ornament{
+  display:flex;align-items:center;justify-content:center;gap:18px;
+  color:var(--maroon);opacity:0.55;
+  margin:0 auto;
+}
+.ornament .line{height:1px;width:80px;background:currentColor;opacity:0.55}
+.ornament svg{width:22px;height:22px}
+
+@media (max-width: 960px){
+  .hero{padding:140px 0 70px;min-height:auto}
+  .hero-grid{grid-template-columns:1fr;gap:50px}
+  .hero-figure{order:-1;max-width:420px;margin:0 auto}
+  .hero-figure-tag{left:auto;right:-10px}
+}
+
+/* ======================== ABOUT / BIO ======================== */
+.section-eyebrow{
+  display:flex;align-items:center;gap:14px;
+  color:var(--maroon);
+  margin-bottom:24px;
+}
+.section-eyebrow .num{
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;font-size:1.1rem;
+}
+.section-eyebrow .line{width:50px;height:1px;background:var(--maroon);opacity:0.5}
+
+.section-title{
+  font-size:clamp(2.4rem, 4.8vw, 4rem);
+  font-weight:300;
+  line-height:1.04;
+  letter-spacing:-0.02em;
+  margin-bottom:20px;
+}
+.section-title em{font-style:italic;color:var(--maroon);font-weight:400}
+
+.bio{
+  background:linear-gradient(180deg, transparent 0%, var(--paper-deep) 0%, var(--paper-deep) 100%);
+}
+.bio-grid{
+  display:grid;
+  grid-template-columns:0.9fr 1.1fr;
+  gap:80px;
+  align-items:center;
+}
+.bio-figure{position:relative}
+.bio-figure img{width:100%;border-radius:2px}
+.bio-figure::after{
+  content:"༄";
+  position:absolute;
+  top:-18px;right:-12px;
+  font-size:3rem;color:var(--saffron);opacity:0.7;
+  font-family:'Noto Serif Tibetan', serif;
+}
+.bio-figure-stamp{
+  position:absolute;bottom:-30px;left:-30px;
+  width:120px;height:120px;
+  border-radius:50%;
+  background:var(--maroon);
+  color:var(--paper-soft);
+  display:grid;place-items:center;text-align:center;
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  line-height:1.2;
+  padding:10px;
+  box-shadow:0 12px 32px -12px rgba(122,31,26,0.4);
+}
+.bio-figure-stamp .big{font-size:1.6rem;display:block;margin-bottom:2px}
+.bio-figure-stamp .label{font-family:'DM Mono',monospace;font-style:normal;font-size:0.55rem;letter-spacing:0.18em;text-transform:uppercase;display:block;opacity:0.85}
+
+.bio-body p{margin-bottom:18px;color:var(--ink-soft);font-size:1.08rem}
+.bio-body p:first-of-type::first-letter{
+  font-family:'Cormorant Garamond',serif;
+  font-size:4.2rem;float:left;line-height:0.85;
+  padding:8px 12px 0 0;color:var(--maroon);font-style:italic;
+}
+
+.credentials{
+  margin-top:36px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  border-top:1px solid var(--rule);
+  border-bottom:1px solid var(--rule);
+  padding:24px 0;
+}
+.credential{
+  text-align:left;
+}
+.credential .num{
+  font-family:'Cormorant Garamond',serif;
+  font-size:2.4rem;color:var(--maroon);
+  font-style:italic;line-height:1;
+  margin-bottom:6px;
+}
+.credential .label{font-family:'DM Mono',monospace;font-size:0.66rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink-soft);line-height:1.5}
+
+@media (max-width: 900px){
+  .bio-grid{grid-template-columns:1fr;gap:60px}
+  .bio-figure{max-width:400px;margin:0 auto}
+  .credentials{grid-template-columns:1fr;gap:24px}
+}
+
+/* ======================== PULL QUOTE ======================== */
+.pullquote{
+  padding:100px 0;
+  text-align:center;
+  position:relative;
+}
+.pullquote::before, .pullquote::after{
+  content:"";position:absolute;left:50%;width:1px;height:60px;background:var(--maroon);opacity:0.4;
+}
+.pullquote::before{top:0;transform:translateX(-50%)}
+.pullquote::after{bottom:0;transform:translateX(-50%)}
+.pullquote-text{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(1.7rem, 3.4vw, 2.6rem);
+  font-style:italic;font-weight:400;
+  line-height:1.3;
+  color:var(--ink);
+  max-width:880px;
+  margin:0 auto 28px;
+}
+.pullquote-text .mark{font-family:serif;color:var(--maroon);font-size:1.3em;line-height:0;vertical-align:-0.3em}
+.pullquote-attr{
+  font-family:'DM Mono',monospace;font-size:0.75rem;letter-spacing:0.22em;
+  text-transform:uppercase;color:var(--maroon);
+}
+
+/* ======================== PLACE / MONASTERY ======================== */
+.place{padding-bottom:60px}
+.place-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:0;
+  align-items:stretch;
+  border-top:1px solid var(--rule);
+  border-bottom:1px solid var(--rule);
+}
+.place-figure{
+  position:relative;
+  overflow:hidden;
+  min-height:520px;
+}
+.place-figure img{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  filter:contrast(1.05) saturate(0.95);
+}
+.place-figure::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg, transparent 50%, rgba(26,20,16,0.4) 100%);
+}
+.place-figure-cap{
+  position:absolute;left:30px;bottom:24px;color:var(--paper-soft);z-index:2;
+  font-family:'DM Mono',monospace;font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;
+}
+.place-text{
+  padding:80px 60px;
+  display:flex;flex-direction:column;justify-content:center;
+  background:var(--paper-soft);
+}
+.place-text h2{margin-bottom:20px}
+.place-text p{color:var(--ink-soft);margin-bottom:18px;font-size:1.08rem}
+.place-meta{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:24px;
+  margin-top:30px;
+  padding-top:30px;
+  border-top:1px solid var(--rule);
+}
+.place-meta div .k{font-family:'DM Mono',monospace;font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--maroon);margin-bottom:6px}
+.place-meta div .v{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-style:italic}
+
+@media (max-width: 900px){
+  .place-grid{grid-template-columns:1fr}
+  .place-figure{min-height:340px}
+  .place-text{padding:60px 30px}
+}
+
+/* ======================== CHILDREN ======================== */
+.children{background:var(--paper-deep);position:relative;padding:140px 0}
+.children-head{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;align-items:end;
+  margin-bottom:80px;
+}
+.children-head .lead{color:var(--ink-soft);font-size:1.1rem;max-width:480px}
+.children-gallery{
+  display:grid;
+  grid-template-columns:1.4fr 1fr;
+  gap:24px;
+  min-height:560px;
+}
+.gallery-item{position:relative;overflow:hidden;border-radius:2px}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .9s ease}
+.gallery-item:hover img{transform:scale(1.04)}
+.gallery-left{height:100%}
+.gallery-right{display:grid;grid-template-rows:1fr auto;gap:24px}
+.gallery-cap{
+  position:absolute;left:18px;bottom:14px;color:var(--paper-soft);
+  font-family:'DM Mono',monospace;font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;
+  background:rgba(26,20,16,0.55);backdrop-filter:blur(4px);
+  padding:6px 12px;border-radius:2px;
+}
+.gallery-text{
+  padding:32px;
+  background:var(--paper-soft);
+  border-left:2px solid var(--maroon);
+}
+.gallery-text p{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.3rem;line-height:1.45;color:var(--ink-soft)}
+.gallery-text p::first-letter{color:var(--maroon);font-size:1.8em;line-height:0.9;float:left;padding:4px 8px 0 0}
+.gallery-text .attr{
+  display:block;margin-top:14px;
+  font-family:'DM Mono',monospace;font-style:normal;font-size:0.62rem;
+  letter-spacing:0.2em;text-transform:uppercase;color:var(--maroon);
+}
+
+@media (max-width: 900px){
+  .children-head{grid-template-columns:1fr;gap:30px}
+  .children-gallery{grid-template-columns:1fr;min-height:0}
+  .gallery-left{height:auto;aspect-ratio:4/3}
+}
+
+/* ======================== LETTERS ======================== */
+.letters{padding:140px 0}
+.letters-head{text-align:center;max-width:680px;margin:0 auto 80px}
+.letters-head .section-eyebrow{justify-content:center}
+.letters-head p{color:var(--ink-soft);margin-top:20px;font-size:1.1rem}
+
+.letters-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:40px;
+}
+.letter-card{
+  background:var(--paper-soft);
+  padding:36px 30px 30px;
+  border:1px solid var(--rule);
+  position:relative;
+  transition:transform .4s ease, box-shadow .4s ease;
+}
+.letter-card:hover{transform:translateY(-6px);box-shadow:0 22px 50px -22px rgba(122,31,26,0.25)}
+.letter-card::before{
+  content:"";position:absolute;top:-1px;left:-1px;right:-1px;height:3px;
+  background:linear-gradient(90deg, var(--maroon), var(--saffron), var(--teal));
+}
+.letter-img-wrap{
+  background:#fff;
+  padding:14px;
+  margin-bottom:24px;
+  border:1px solid var(--rule-soft);
+  box-shadow:inset 0 0 0 1px rgba(122,31,26,0.05);
+}
+.letter-img-wrap img{width:100%;display:block}
+.letter-tag{
+  font-family:'DM Mono',monospace;font-size:0.63rem;letter-spacing:0.18em;
+  text-transform:uppercase;color:var(--maroon);margin-bottom:8px;
+}
+.letter-card h3{
+  font-family:'Cormorant Garamond',serif;font-weight:400;font-size:1.6rem;
+  margin-bottom:6px;line-height:1.2;
+}
+.letter-card h3 em{font-style:italic;color:var(--maroon)}
+.letter-card .from{
+  font-family:'EB Garamond',serif;font-style:italic;color:var(--ink-soft);font-size:0.95rem;margin-bottom:18px;
+}
+.letter-card .body{
+  font-size:0.97rem;color:var(--ink-soft);line-height:1.6;
+  border-top:1px solid var(--rule-soft);padding-top:18px;
+}
+.letter-card .seal{
+  position:absolute;top:24px;right:24px;
+  width:40px;height:40px;border-radius:50%;
+  border:1px dashed var(--maroon);
+  display:grid;place-items:center;
+  font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--maroon);font-size:0.85rem;
+  opacity:0.65;
+}
+
+@media (max-width: 980px){
+  .letters-grid{grid-template-columns:1fr;max-width:560px;margin:0 auto}
+}
+
+/* ======================== HELP / DONATION ======================== */
+.help{
+  background:var(--ink);
+  color:var(--paper-soft);
+  padding:140px 0;
+  position:relative;overflow:hidden;
+}
+.help::before{
+  content:"";position:absolute;inset:0;
+  background-image:
+    radial-gradient(ellipse at 10% 0%, rgba(184,137,58,0.18) 0%, transparent 40%),
+    radial-gradient(ellipse at 90% 100%, rgba(122,31,26,0.35) 0%, transparent 50%);
+  pointer-events:none;
+}
+.help::after{
+  content:"";position:absolute;inset:0;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 0.95 0 0 0 0 0.85 0 0 0 0.5 0'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.08'/></svg>");
+  pointer-events:none;
+}
+.help .wrap{position:relative;z-index:2}
+.help-head{display:grid;grid-template-columns:1fr 1fr;gap:80px;margin-bottom:80px;align-items:end}
+.help .section-eyebrow{color:var(--saffron)}
+.help .section-eyebrow .line{background:var(--saffron)}
+.help .section-title{color:var(--paper-soft)}
+.help .section-title em{color:var(--saffron)}
+.help-head .lead{color:rgba(245,237,223,0.75);font-size:1.1rem;max-width:480px}
+
+.tiers{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+.tier{
+  background:rgba(245,237,223,0.04);
+  border:1px solid rgba(245,237,223,0.15);
+  padding:32px 26px;
+  position:relative;
+  transition:all .4s ease;
+}
+.tier:hover{
+  background:rgba(245,237,223,0.07);
+  border-color:var(--saffron);
+  transform:translateY(-6px);
+}
+.tier .amount{
+  font-family:'Cormorant Garamond',serif;
+  font-weight:400;
+  font-size:2.6rem;
+  color:var(--saffron);
+  font-style:italic;
+  line-height:1;
+  margin-bottom:6px;
+}
+.tier .amount .currency{font-size:0.6em;vertical-align:0.4em;margin-right:2px;font-style:normal}
+.tier .name{
+  font-family:'DM Mono',monospace;font-size:0.7rem;letter-spacing:0.18em;
+  text-transform:uppercase;color:rgba(245,237,223,0.6);margin-bottom:18px;
+}
+.tier .desc{font-size:0.98rem;color:rgba(245,237,223,0.85);line-height:1.55}
+.tier-cta{
+  display:flex;justify-content:center;margin-top:60px;
+}
+.tier-cta .btn{border-color:var(--saffron);color:var(--paper-soft);background:transparent}
+.tier-cta .btn:hover{background:var(--saffron);color:var(--ink)}
+
+@media (max-width: 1000px){
+  .help-head{grid-template-columns:1fr;gap:30px}
+  .tiers{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width: 560px){
+  .tiers{grid-template-columns:1fr}
+}
+
+/* ======================== CONTACT / FOOTER ======================== */
+.contact{padding:140px 0 80px}
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;
+  align-items:start;
+}
+.contact-form{display:grid;gap:18px}
+.contact-form input, .contact-form textarea{
+  width:100%;padding:14px 16px;
+  background:transparent;
+  border:none;border-bottom:1px solid var(--rule);
+  font-family:'EB Garamond',serif;font-size:1.05rem;color:var(--ink);
+  outline:none;
+  transition:border-color .25s;
+}
+.contact-form input:focus, .contact-form textarea:focus{border-color:var(--maroon)}
+.contact-form textarea{min-height:120px;resize:vertical}
+.contact-form button{align-self:start;margin-top:10px}
+
+.contact-info dt{
+  font-family:'DM Mono',monospace;font-size:0.66rem;letter-spacing:0.18em;
+  text-transform:uppercase;color:var(--maroon);margin-top:24px;margin-bottom:6px;
+}
+.contact-info dt:first-of-type{margin-top:0}
+.contact-info dd{font-size:1.08rem;color:var(--ink-soft);font-family:'Cormorant Garamond',serif;font-style:italic}
+
+footer{
+  border-top:1px solid var(--rule);
+  padding:40px 0;
+  text-align:center;
+}
+footer .row{
+  display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;
+  font-family:'DM Mono',monospace;font-size:0.68rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink-soft);
+}
+footer em{font-family:'Cormorant Garamond',serif;font-style:italic;text-transform:none;letter-spacing:0;font-size:1.1rem;color:var(--maroon)}
+
+@media (max-width: 800px){
+  .contact-grid{grid-template-columns:1fr;gap:50px}
+}
+
+/* ======================== ANIMATIONS ======================== */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity 1s ease, transform 1s ease}
+.reveal.in{opacity:1;transform:none}
+
+@media (prefers-reduced-motion: reduce){
+  *{animation:none !important;transition:none !important}
+  .reveal{opacity:1;transform:none}
+}
+
+/* ======================== UTILITY ======================== */
+.center{text-align:center}
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav class="nav">
+  <div class="nav-brand">
+    <span class="nav-mark">ༀ</span>
+    <span class="nav-title">The Seeds of <em>Wisdom</em></span>
+  </div>
+  <div class="nav-links">
+    <a href="#story">Story</a>
+    <a href="#place">The Place</a>
+    <a href="#letters">Recognition</a>
+    <a href="#help" class="nav-cta">Donate</a>
+  </div>
+</nav>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-text reveal">
+        <div class="hero-eyebrow">
+          <span class="line"></span>
+          <span class="mono">Rela Monastery · Nangchen, Kham</span>
+        </div>
+
+        <h1 class="display hero-headline">
+          The Seeds<br>of <em>Wisdom</em>
+          <span class="small">A school in the highest peaks on Earth</span>
+        </h1>
+
+        <p class="hero-sub">
+          Every child here is a Bodhi seed — a seed of enlightenment waiting for the chance to grow. In a remote monastery school nestled among Himalayan peaks, we provide soil, water, and light: education, shelter, and the profound teachings of the Buddha.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#help" class="btn btn-primary">
+            Support a child <span class="arrow">→</span>
+          </a>
+          <a href="#story" class="btn btn-ghost">Read the story</a>
+        </div>
+      </div>
+
+      <figure class="hero-figure reveal">
+        <img src="images/khenpo-large.jpg" alt="Khenpo Kunga Rinchen seated on grass" />
+        <figcaption class="hero-figure-tag">
+          “To guide these young minds is a great responsibility, one I accept with joy.”
+          <span class="name">— Khenpo Kunga Rinchen</span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ornament -->
+<div class="ornament wrap" aria-hidden="true">
+  <span class="line"></span>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2v20M2 12h20M5 5l14 14M19 5L5 19"/></svg>
+  <span class="line"></span>
+</div>
+
+<!-- ============ BIO ============ -->
+<section class="bio" id="story">
+  <div class="wrap">
+    <div class="bio-grid">
+      <figure class="bio-figure reveal">
+        <img src="images/khenpo-portrait.jpg" alt="Khenpo Kunga Rinchen portrait" />
+        <div class="bio-figure-stamp">
+          <div>
+            <span class="big">116</span>
+            <span class="label">Volumes Edited<br>Gyud She Kuntu</span>
+          </div>
+        </div>
+      </figure>
+
+      <div class="bio-body reveal">
+        <div class="section-eyebrow">
+          <span class="num">i.</span>
+          <span class="line"></span>
+          <span class="mono">A life devoted</span>
+        </div>
+
+        <h2 class="display section-title">Khenpo<br><em>Kunga Rinchen</em></h2>
+
+        <p>
+          Born into the high plateaus of Kham, Khenpo Kunga Rinchen is a senior monk and scholar of the Sakya tradition — a teacher whose life has been quietly devoted to the Dharma and to the children who come to learn beneath the snow line.
+        </p>
+        <p>
+          He completed the monumental task of editing the 116-volume <em>Gyud She Kuntu</em> collection of teachings, and was unanimously appointed <em>Khenpo</em> by the monastic assembly of Rela Monastery — a recognition of decades of unwavering practice, scholarship, and care for his community.
+        </p>
+        <p>
+          Today he carries a sacred responsibility: managing the finances of the monastery's primary school, where dozens of young monks live, study, and grow.
+        </p>
+
+        <div class="credentials">
+          <div class="credential">
+            <div class="num">2019</div>
+            <div class="label">Title of Khenpo<br>conferred by Sakya Trizin</div>
+          </div>
+          <div class="credential">
+            <div class="num">116</div>
+            <div class="label">Volumes of teachings<br>edited & preserved</div>
+          </div>
+          <div class="credential">
+            <div class="num">∞</div>
+            <div class="label">Lamps lit for<br>future generations</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PULL QUOTE ============ -->
+<section class="pullquote">
+  <div class="wrap-narrow">
+    <p class="pullquote-text">
+      <span class="mark">“</span>Each child we educate is a lamp we light for the future, illuminating a world that needs more peace and wisdom.<span class="mark">”</span>
+    </p>
+    <p class="pullquote-attr">— Khenpo Kunga Rinchen</p>
+  </div>
+</section>
+
+<!-- ============ PLACE ============ -->
+<section class="place" id="place">
+  <div class="wrap">
+    <div class="place-grid">
+      <figure class="place-figure reveal">
+        <img src="images/monastery-mountains.jpg" alt="Rela Monastery in the high mountains" />
+        <figcaption class="place-figure-cap">Rela Monastery · Nangchen, Qinghai</figcaption>
+      </figure>
+      <div class="place-text reveal">
+        <div class="section-eyebrow">
+          <span class="num">ii.</span>
+          <span class="line"></span>
+          <span class="mono">The Place</span>
+        </div>
+        <h2 class="display section-title">Among the<br><em>highest peaks</em> on Earth</h2>
+        <p>
+          The school sits at the edge of glaciers — a small constellation of buildings cradled by snow and stone. Winters are long and unforgiving. Resources are few. But beneath the prayer flags, life is luminous.
+        </p>
+        <p>
+          Here, children rise before dawn to recite, to study, to learn the kindness that sustains the world.
+        </p>
+
+        <div class="place-meta">
+          <div>
+            <div class="k">Region</div>
+            <div class="v">Nangchen, Kham</div>
+          </div>
+          <div>
+            <div class="k">Tradition</div>
+            <div class="v">Sakya Lineage</div>
+          </div>
+          <div>
+            <div class="k">Elevation</div>
+            <div class="v">~ 4,200 m</div>
+          </div>
+          <div>
+            <div class="k">Founded</div>
+            <div class="v">17th century</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHILDREN ============ -->
+<section class="children">
+  <div class="wrap">
+    <div class="children-head">
+      <div class="reveal">
+        <div class="section-eyebrow">
+          <span class="num">iii.</span>
+          <span class="line"></span>
+          <span class="mono">The Children</span>
+        </div>
+        <h2 class="display section-title">A forest of<br><em>compassion</em>, one seed at a time</h2>
+      </div>
+      <p class="lead reveal">
+        Robes of deep maroon and bright saffron. Faces still young, eyes already steady. These are the children whose education is supported by your kindness — sons of yak herders, of farmers, of families for whom schooling would otherwise be a distant prayer.
+      </p>
+    </div>
+
+    <div class="children-gallery">
+      <figure class="gallery-item gallery-left reveal">
+        <img src="images/young-monks.jpg" alt="Young monks gathered at the monastery" />
+        <figcaption class="gallery-cap">Morning gathering · Rela Monastery</figcaption>
+      </figure>
+      <div class="gallery-right">
+        <figure class="gallery-item reveal">
+          <img src="images/monks-orange.jpg" alt="Young monks in saffron shawls" />
+          <figcaption class="gallery-cap">Saffron shawls</figcaption>
+        </figure>
+        <div class="gallery-text reveal">
+          <p>“Your contribution, no matter the size, helps us provide warm meals, books, robes, and a safe place to learn and grow.”
+          <span class="attr">— Khenpo Kunga Rinchen</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LETTERS ============ -->
+<section class="letters" id="letters">
+  <div class="wrap">
+    <div class="letters-head reveal">
+      <div class="section-eyebrow">
+        <span class="num">iv.</span>
+        <span class="line"></span>
+        <span class="mono">Letters of Recognition</span>
+      </div>
+      <h2 class="display section-title">Endorsed by the<br>highest <em>masters</em> of the lineage</h2>
+      <p>Three letters of formal recognition — from His Holiness the Sakya Trizin, from the Rela Monastery assembly, and from the Elder Abbot of Ngor Luding — affirming Khenpo Kunga Rinchen's role and inviting your support.</p>
+    </div>
+
+    <div class="letters-grid">
+      <article class="letter-card reveal">
+        <span class="seal">SK</span>
+        <span class="letter-tag">Letter I · 2019</span>
+        <h3 class="display">From <em>Sakya Trizin</em></h3>
+        <p class="from">His Holiness the 41st Sakya Trizin</p>
+        <div class="letter-img-wrap">
+          <img src="images/letter-sakya-trizin.jpg" alt="Letter from Sakya Trizin" />
+        </div>
+        <p class="body">
+          Confirms the conferral of the title of <em>Khenpo</em> upon the devoted monk Kunga Rinchen, and entrusts him with the sacred responsibility of managing the finances of the monastery's primary school. An appeal to all faithful and generous individuals.
+        </p>
+      </article>
+
+      <article class="letter-card reveal">
+        <span class="seal">RM</span>
+        <span class="letter-tag">Letter II</span>
+        <h3 class="display">From the <em>Monastery</em></h3>
+        <p class="from">Rela Monastery, Nangchen, Qinghai</p>
+        <div class="letter-img-wrap">
+          <img src="images/letter-monastery.jpg" alt="Letter from Rela Monastery" />
+        </div>
+        <p class="body">
+          Announces the unanimous nomination of Kunga Rinchen as Khenpo, recognizing the completion of his editing of the 116-volume <em>Gyud She Kuntu</em>, his long-standing dedication, and his proven ability to lead the community.
+        </p>
+      </article>
+
+      <article class="letter-card reveal">
+        <span class="seal">NL</span>
+        <span class="letter-tag">Letter III</span>
+        <h3 class="display">From <em>Luding Khenchen</em></h3>
+        <p class="from">Elder Abbot of Ngor Luding, Dehradun, India</p>
+        <div class="letter-img-wrap">
+          <img src="images/letter-luding-khenchen.jpg" alt="Letter from Luding Khenchen" />
+        </div>
+        <p class="body">
+          A heartfelt commendation appealing to all benevolent individuals to extend their support and cooperation toward the school's needs — with the assurance that every contribution will be used judiciously and with utmost accountability.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HELP / DONATE ============ -->
+<section class="help" id="help">
+  <div class="wrap">
+    <div class="help-head">
+      <div class="reveal">
+        <div class="section-eyebrow">
+          <span class="num">v.</span>
+          <span class="line"></span>
+          <span class="mono">How you can help</span>
+        </div>
+        <h2 class="display section-title">Plant a seed.<br>Grow a <em>forest</em>.</h2>
+      </div>
+      <p class="lead reveal">
+        Every gift — large or small — is met with gratitude and used with care. Choose a level that feels right, or write to us about a custom contribution. All amounts are suggestions; what matters is the intention.
+      </p>
+    </div>
+
+    <div class="tiers">
+      <div class="tier reveal">
+        <div class="amount"><span class="currency">$</span>30</div>
+        <div class="name">A Robe</div>
+        <p class="desc">Provides one young monk with a set of warm robes for the long Himalayan winter.</p>
+      </div>
+      <div class="tier reveal">
+        <div class="amount"><span class="currency">$</span>75</div>
+        <div class="name">A Month of Meals</div>
+        <p class="desc">Hot tsampa and dal for a child for a full month — fuel for body, mind, and study.</p>
+      </div>
+      <div class="tier reveal">
+        <div class="amount"><span class="currency">$</span>200</div>
+        <div class="name">Books & Texts</div>
+        <p class="desc">A year of textbooks, woodblock prints, and study materials for one student.</p>
+      </div>
+      <div class="tier reveal">
+        <div class="amount"><span class="currency">$</span>600</div>
+        <div class="name">A Full Year</div>
+        <p class="desc">Sponsor a child's complete education, lodging, and care for one full year.</p>
+      </div>
+    </div>
+
+    <div class="tier-cta reveal">
+      <a href="#contact" class="btn">Make a contribution <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="reveal">
+        <div class="section-eyebrow">
+          <span class="num">vi.</span>
+          <span class="line"></span>
+          <span class="mono">Be in touch</span>
+        </div>
+        <h2 class="display section-title">Write to <em>us</em></h2>
+        <p style="color:var(--ink-soft);margin-top:14px;max-width:400px">
+          For donations, sponsorships, or questions about our work, leave a note. We read every message — and reply with thanks.
+        </p>
+      </div>
+
+      <form class="contact-form reveal" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Tashi Delek — message sent ✦';">
+        <input type="text" placeholder="Your name" required />
+        <input type="email" placeholder="Email address" required />
+        <input type="text" placeholder="Subject" />
+        <textarea placeholder="Your message"></textarea>
+        <button type="submit" class="btn btn-primary">Send message <span class="arrow">→</span></button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="row">
+      <div>The Seeds of Wisdom <em>· Rela Monastery School</em></div>
+      <div>Nangchen · Kham · Qinghai</div>
+      <div>© <span id="yr"></span> · Sarva Mangalam</div>
+    </div>
+  </div>
+</footer>
+
+</main>
+
+<script>
+// Reveal on scroll
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+  });
+},{threshold:0.12, rootMargin:'0px 0px -60px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// Year
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+// Stagger reveal slightly per element in same container
+document.querySelectorAll('.tiers .reveal, .letters-grid .reveal, .credentials > *').forEach((el,i)=>{
+  el.style.transitionDelay = (i*90)+'ms';
+});
+</script>
+</body>
+</html>
